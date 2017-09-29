@@ -22,3 +22,4 @@
 /web/themes/custom/*/css
 /web/themes/custom/*/node_modules
 /web/libraries
+/web/modules/custom/collage
