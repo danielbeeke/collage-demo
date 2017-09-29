@@ -1,0 +1,16 @@
+uuid: 8fd36a92-0fa0-4f42-af67-ec8545e83bb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.collage
+id: media.collage.default
+targetEntityType: media
+bundle: collage
+mode: default
+content: {  }
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

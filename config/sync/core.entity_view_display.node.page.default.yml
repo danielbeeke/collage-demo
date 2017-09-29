@@ -1,0 +1,17 @@
+uuid: afb8e856-6db0-4cb7-8297-52df5cc7eda6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page.field_bricks
+    - node.type.page
+  module:
+    - user
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content: {  }
+hidden:
+  field_bricks: true
+  links: true

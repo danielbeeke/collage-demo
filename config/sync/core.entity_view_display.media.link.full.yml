@@ -1,0 +1,51 @@
+uuid: f7e34fe5-fc05-4ff4-9dc7-74ba28b6ad02
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - field.field.media.link.field_image
+    - field.field.media.link.field_link
+    - media_entity.bundle.link
+  module:
+    - ds
+    - image
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_image
+id: media.link.full
+targetEntityType: media
+bundle: link
+mode: full
+content:
+  field_image:
+    type: image
+    weight: 0
+    region: ds_content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_link: true
+  name: true
+  thumbnail: true
+  uid: true

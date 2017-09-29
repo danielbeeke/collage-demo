@@ -1,0 +1,10 @@
+@include sgs-change('mobile first', true);
+
+/* Sizes */
+$tablet: 768px;
+$desktop: 1100px;
+@include add-grid(12);
+@include add-grid(24 at $tablet);
+@include add-grid(32 at $desktop);
+
+@include add-gutter(0);

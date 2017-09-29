@@ -1,0 +1,12 @@
+uuid: 9858fc46-20de-4c92-94a8-5775237186f8
+langcode: en
+status: true
+dependencies: {  }
+id: link
+label: Link
+description: ''
+type: generic
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration: {  }
+field_map: {  }

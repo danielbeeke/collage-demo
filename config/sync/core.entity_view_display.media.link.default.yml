@@ -1,0 +1,20 @@
+uuid: b3fdfdcc-f4be-4cf3-896d-264c1e89ee1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.link.field_image
+    - field.field.media.link.field_link
+    - media_entity.bundle.link
+id: media.link.default
+targetEntityType: media
+bundle: link
+mode: default
+content: {  }
+hidden:
+  created: true
+  field_image: true
+  field_link: true
+  name: true
+  thumbnail: true
+  uid: true

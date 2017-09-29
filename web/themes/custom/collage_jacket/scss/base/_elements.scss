@@ -1,0 +1,62 @@
+html {
+  padding: 0;
+  margin: 0 auto;
+  max-width: $max-width;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  line-height: 150%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Marcellus', serif;
+  font-weight: 300;
+
+}
+
+$font-size-factors: (
+    // Mobile
+    (
+      h1: (1, 1.2),
+      h2: (.9, 1.1),
+      h3: (.8, 1)
+    ),
+
+    // Tablet
+    (
+      h1: (1.4, 1.6),
+      h2: (1.2, 1.4),
+      h3: (.9, 1.2)
+    ),
+
+    // Desktop
+    (
+      h1: (1.2, 1.4),
+      h2: (.8, 1),
+      h3: (.6, .8)
+    ),
+
+    // Max-width
+    (
+      h1: (.8, 1.2),
+      h2: (.6, .8),
+      h3: (.5, .6)
+    ),
+);
+
+@include responsive-vw-col {
+  @each $header, $font-factor in nth($font-size-factors, $grid-index) {
+    #{$header} {
+      font-size: $vw-col * nth($font-factor, 1);
+      line-height: $vw-col * nth($font-factor, 2);
+    }
+  }
+}

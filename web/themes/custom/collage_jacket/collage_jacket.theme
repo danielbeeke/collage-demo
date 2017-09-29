@@ -1,0 +1,84 @@
+<?php
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Url;
+use Drupal\ds\Ds;
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function collage_jacket_theme_registry_alter(&$theme_registry) {
+  $layouts = Ds::getLayouts();
+  $layout_theme_hooks = [];
+  foreach ($layouts as $info) {
+    if ($info->getClass() == 'Drupal\ds\Plugin\DsLayout') {
+      $layout_theme_hooks[] = $info->getThemeHook();
+    }
+  }
+
+  // Only add preprocess functions if entity exposes theme function, and this
+  // layout is using the Display Suite layout class.
+  foreach ($theme_registry as $theme_hook => $info) {
+    if (in_array($theme_hook, $layout_theme_hooks) || (!empty($info['base hook']) && in_array($info['base hook'], $layout_theme_hooks))) {
+      $theme_registry[$theme_hook]['preprocess functions'][] = 'collage_jacket_preprocess_ds_layout';
+    }
+  }
+}
+
+function collage_jacket_preprocess_ds_layout(&$variables) {
+  $variables['attributes']['class'][] = $variables['content']['#entity_type'];
+  $variables['attributes']['class'][] = $variables['content']['#bundle'];
+  $variables['attributes']['class'][] = $variables['content']['#view_mode'];
+
+  if (isset($variables['content']['#media']) && isset($variables['content']['#media']->field_color->color)) {
+    $variables['attributes']['data-color'][] = $variables['content']['#media']->field_color->color;
+  }
+
+  if ($variables['content']['#bundle'] == 'link') {
+    $url = Url::fromUri($variables['content']['#media']->field_link->uri);
+    $variables['attributes']['href'] = $url->toString();
+    $variables['ds_content_wrapper'] = 'a';
+
+    if (isset($variables['content']['#media']->field_color->color)) {
+      $color = $variables['content']['#media']->field_color->color;
+      $variables['attributes']['style'][] = 'background-color: ' . $color . '; color: ' . $color . '; border-color: ' . $color . ';';
+    }
+  }
+}
+
+function collage_jacket_preprocess_image(&$variables) {
+  unset($variables['attributes']['width']);
+  unset($variables['attributes']['height']);
+
+  if (isset($variables['style_name'])) {
+    $variables['attributes']['class'][] = 'image-style';
+    $variables['attributes']['class'][] = Html::getClass($variables['style_name']);
+  }
+}
+
+function collage_jacket_preprocess_field(&$variables) {
+  if ($variables['field_type'] == 'video_embed_field') {
+    $classes = &$variables['items'][0]['content']['#attributes']['class'];
+    $classes = array_diff($classes, ['video-embed-field-responsive-video']);
+    $classes[] = 'video-embed-field';
+  }
+}
+
+function collage_jacket_preprocess_menu(&$variables) {
+  collage_jacket_process_sub_menu($variables['items']);
+}
+
+function collage_jacket_process_sub_menu(&$items) {
+  foreach ($items as &$item) {
+    if ($item['title'] == ' ') {
+      $item['no_title'] = TRUE;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function collage_jacket_preprocess_html(&$variables) {
+  unset($variables['page_top']['toolbar']);
+}

@@ -1,0 +1,20 @@
+uuid: 8b677615-577d-49ed-b050-02e379e5a325
+langcode: en
+status: true
+dependencies:
+  theme:
+    - seven
+id: tabs
+theme: seven
+region: header
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: false
+visibility: {  }

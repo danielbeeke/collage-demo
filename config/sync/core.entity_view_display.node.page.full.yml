@@ -1,0 +1,83 @@
+uuid: 6ec9b736-9c45-45ef-a398-0a742701cc8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.page.field_bricks
+    - node.type.page
+  module:
+    - bricks
+    - ds
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - node_title
+        - field_bricks
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+id: node.page.full
+targetEntityType: node
+bundle: page
+mode: full
+content:
+  field_bricks:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: bricks
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    type: bricks_nested
+    region: ds_content
+hidden:
+  links: true

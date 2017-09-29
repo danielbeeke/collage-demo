@@ -1,0 +1,15 @@
+uuid: a45d8060-6224-403a-8249-64097d845cc2
+langcode: en
+status: true
+dependencies:
+  module:
+    - collage
+id: collage
+label: Collage
+description: ''
+type: collage
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration:
+  collage_breakpoints: "Mobile|320|6\r\nTablet|720|12\r\nDesktop|1280|24"
+field_map: {  }

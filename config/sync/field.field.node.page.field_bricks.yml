@@ -1,0 +1,33 @@
+uuid: 3050dce8-4e69-48da-8783-88cea5a1def6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bricks
+    - media_entity.bundle.collage
+    - media_entity.bundle.link
+    - node.type.page
+  module:
+    - bricks
+id: node.page.field_bricks
+field_name: field_bricks
+entity_type: node
+bundle: page
+label: Bricks
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      collage: collage
+      link: link
+    sort:
+      field: name
+      direction: ASC
+    auto_create: 0
+    auto_create_bundle: collage
+field_type: bricks

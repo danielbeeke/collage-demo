@@ -1,0 +1,36 @@
+uuid: cc39b53c-c87b-4489-8c64-0cf977aee2e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - media_entity.bundle.collage
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions: {  }
+id: media.collage.full
+targetEntityType: media
+bundle: collage
+mode: full
+content: {  }
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,20 @@
+{
+  "name": "collage",
+  "authors": [
+    "Daniel Beeke <daniel@studiofonkel.nl>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "turbolinks": "turbolinks/turbolinks#^5.0.3"
+  }
+}

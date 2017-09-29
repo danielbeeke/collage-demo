@@ -1,0 +1,7 @@
+global:
+  version: VERSION
+  css:
+    base:
+      css/stylesheet.css: { preprocess: false }
+  js:
+    js/grid-visualizer.js: {}

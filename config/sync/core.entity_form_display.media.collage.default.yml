@@ -1,0 +1,22 @@
+uuid: 3501eac6-b3c3-4c38-b026-323b13fe9b5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.collage
+id: media.collage.default
+targetEntityType: media
+bundle: collage
+mode: default
+content:
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

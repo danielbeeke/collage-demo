@@ -1,0 +1,12 @@
+name: Collage jacket
+type: theme
+description: 'Collage jacket'
+core: 8.x
+
+regions:
+  header: 'Header'
+  menu: 'menu'
+  content: 'Content'
+  footer: 'Footer'
+libraries:
+  - collage_jacket/global
