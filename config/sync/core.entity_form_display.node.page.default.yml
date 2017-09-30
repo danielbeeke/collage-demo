@@ -4,22 +4,21 @@ status: true
 dependencies:
   config:
     - field.field.node.page.field_bricks
+    - field.field.node.page.field_image
+    - field.field.node.page.field_summary
+    - image.style.thumbnail
     - node.type.page
   module:
     - bricks_inline
+    - image
+    - text
 id: node.page.default
 targetEntityType: node
 bundle: page
 mode: default
 content:
-  created:
-    type: datetime_timestamp
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_bricks:
-    weight: 26
+    weight: 3
     settings:
       form_mode: default
       label_singular: ''
@@ -31,35 +30,33 @@ content:
     third_party_settings: {  }
     type: bricks_tree_inline
     region: content
-  promote:
-    type: boolean_checkbox
+  field_image:
+    weight: 1
     settings:
-      display_label: true
-    weight: 15
-    region: content
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
-  sticky:
-    type: boolean_checkbox
+    type: image_image
+    region: content
+  field_summary:
+    weight: 2
     settings:
-      display_label: true
-    weight: 16
-    region: content
+      rows: 5
+      placeholder: ''
     third_party_settings: {  }
+    type: text_textarea
+    region: content
   title:
     type: string_textfield
-    weight: -5
+    weight: 0
     region: content
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  uid:
-    type: entity_reference_autocomplete
-    weight: 5
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    region: content
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  created: true
+  path: true
+  promote: true
+  sticky: true
+  uid: true

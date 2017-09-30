@@ -1,18 +1,14 @@
-uuid: f7e34fe5-fc05-4ff4-9dc7-74ba28b6ad02
+uuid: 22ca7d16-2d9e-44b0-a547-9707deaf1fa1
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.media.full
-    - field.field.media.link.field_color
-    - field.field.media.link.field_image
-    - field.field.media.link.field_link
-    - field.field.media.link.field_link_text
-    - image.style.large
-    - media_entity.bundle.link
+    - field.field.media.text.field_text
+    - media_entity.bundle.text
   module:
     - ds
-    - image
+    - text
 third_party_settings:
   ds:
     layout:
@@ -31,21 +27,18 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - field_image
-        - field_link_text
-id: media.link.full
+        - field_text
+id: media.text.full
 targetEntityType: media
-bundle: link
+bundle: text
 mode: full
 content:
-  field_image:
-    type: image
+  field_text:
+    type: text_default
     weight: 0
     region: ds_content
     label: hidden
-    settings:
-      image_style: large
-      image_link: ''
+    settings: {  }
     third_party_settings:
       ds:
         ft:
@@ -75,46 +68,8 @@ content:
             fis-def-at: false
             fi: false
             fi-def-at: false
-  field_link_text:
-    type: string
-    weight: 1
-    region: ds_content
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings:
-      ds:
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw-el: ''
-            lbw-cl: ''
-            lbw-at: ''
-            ow: true
-            ow-el: h3
-            ow-cl: title
-            ow-at: ''
-            fis-el: ''
-            fis-cl: ''
-            fis-at: ''
-            fi-el: ''
-            fi-cl: ''
-            fi-at: ''
-            suffix: ''
-            lbw: false
-            lb-col: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis: false
-            fis-def-at: false
-            fi: false
-            fi-def-at: false
 hidden:
   created: true
-  field_color: true
-  field_link: true
   name: true
   thumbnail: true
   uid: true

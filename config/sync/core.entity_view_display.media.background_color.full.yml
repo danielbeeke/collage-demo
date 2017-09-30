@@ -1,9 +1,11 @@
-uuid: 8fd36a92-0fa0-4f42-af67-ec8545e83bb6
+uuid: 36defc65-2202-49ea-931f-46d5a105c284
 langcode: en
 status: true
 dependencies:
   config:
-    - media_entity.bundle.collage
+    - core.entity_view_mode.media.full
+    - field.field.media.background_color.field_color
+    - media_entity.bundle.background_color
   module:
     - ds
 third_party_settings:
@@ -12,7 +14,7 @@ third_party_settings:
       id: ds_1col
       library: null
       disable_css: false
-      entity_classes: all_classes
+      entity_classes: no_classes
       settings:
         wrappers:
           ds_content: div
@@ -23,13 +25,14 @@ third_party_settings:
         classes:
           layout_class: {  }
     regions: {  }
-id: media.collage.default
+id: media.background_color.full
 targetEntityType: media
-bundle: collage
-mode: default
+bundle: background_color
+mode: full
 content: {  }
 hidden:
   created: true
+  field_color: true
   name: true
   thumbnail: true
   uid: true

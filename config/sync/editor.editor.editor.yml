@@ -1,0 +1,52 @@
+uuid: 7e85bfa6-ad29-448e-9a8e-51c6cc2f0e38
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.editor
+  module:
+    - ckeditor
+format: editor
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Styles
+            - Bold
+            - Italic
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalImage
+        -
+          name: Tools
+          items:
+            - Source
+  plugins:
+    language:
+      language_list: un
+    stylescombo:
+      styles: "h1.title|Title H1\r\nh2.title|Title H2\r\nh3.title|Title H3"
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

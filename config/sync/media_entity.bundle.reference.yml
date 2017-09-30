@@ -1,0 +1,12 @@
+uuid: f3b7273f-b5a3-49ad-8b0b-6bd2db0cb936
+langcode: en
+status: true
+dependencies: {  }
+id: reference
+label: Reference
+description: ''
+type: generic
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration: {  }
+field_map: {  }

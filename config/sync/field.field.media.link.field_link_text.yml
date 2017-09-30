@@ -1,0 +1,19 @@
+uuid: f10a4ac2-e0a5-413c-b5bb-20260dd24797
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_link_text
+    - media_entity.bundle.link
+id: media.link.field_link_text
+field_name: field_link_text
+entity_type: media
+bundle: link
+label: 'Link text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

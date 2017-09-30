@@ -1,25 +1,23 @@
-uuid: 419145c3-66b5-4052-bf8d-d05ada8fdc80
+uuid: 8c104974-3340-4416-9545-34662ee126c7
 langcode: en
 status: true
 dependencies:
   module:
     - system
   theme:
-    - bartik
-_core:
-  default_config_hash: fRKXNB91UxDvEMkzCR8ZBsawfC6Fqbme2gtobei3gu4
-id: bartik_branding
-theme: bartik
+    - collage_jacket
+id: branding
+theme: collage_jacket
 region: header
 weight: 0
 provider: null
 plugin: system_branding_block
 settings:
   id: system_branding_block
-  label: 'Site branding'
+  label: Branding
   provider: system
   label_display: '0'
   use_site_logo: true
   use_site_name: true
-  use_site_slogan: true
+  use_site_slogan: false
 visibility: {  }

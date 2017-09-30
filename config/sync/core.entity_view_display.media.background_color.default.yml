@@ -1,0 +1,18 @@
+uuid: 077105c5-5ca1-4f1d-b1e2-bf5e1a9ea1c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.background_color.field_color
+    - media_entity.bundle.background_color
+id: media.background_color.default
+targetEntityType: media
+bundle: background_color
+mode: default
+content: {  }
+hidden:
+  created: true
+  field_color: true
+  name: true
+  thumbnail: true
+  uid: true

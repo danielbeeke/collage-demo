@@ -3,11 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.link.field_color
     - field.field.media.link.field_image
     - field.field.media.link.field_link
+    - field.field.media.link.field_link_text
     - image.style.thumbnail
     - media_entity.bundle.link
   module:
+    - color_field
     - image
     - link
 id: media.link.default
@@ -15,6 +18,13 @@ targetEntityType: media
 bundle: link
 mode: default
 content:
+  field_color:
+    weight: 4
+    settings:
+      default_colors: "\n#AC725E,#D06B64,#F83A22,#FA573C,#FF7537,#FFAD46\n#42D692,#16A765,#7BD148,#B3DC6C,#FBE983\n#92E1C0,#9FE1E7,#9FC6E7,#4986E7,#9A9CFF\n#B99AFF,#C2C2C2,#CABDBF,#CCA6AC,#F691B2\n#CD74E6,#A47AE2"
+    third_party_settings: {  }
+    type: color_field_widget_box
+    region: content
   field_image:
     weight: 1
     settings:
@@ -30,6 +40,14 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_link_text:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
   name:
     type: string_textfield

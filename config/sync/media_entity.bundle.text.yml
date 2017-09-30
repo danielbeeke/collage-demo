@@ -1,0 +1,12 @@
+uuid: 386571b5-2f48-4275-b443-d209db8ab5d5
+langcode: en
+status: true
+dependencies: {  }
+id: text
+label: Text
+description: ''
+type: generic
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration: {  }
+field_map: {  }

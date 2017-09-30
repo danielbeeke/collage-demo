@@ -3,9 +3,30 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.link.field_color
     - field.field.media.link.field_image
     - field.field.media.link.field_link
+    - field.field.media.link.field_link_text
     - media_entity.bundle.link
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: no_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions: {  }
 id: media.link.default
 targetEntityType: media
 bundle: link
@@ -13,8 +34,10 @@ mode: default
 content: {  }
 hidden:
   created: true
+  field_color: true
   field_image: true
   field_link: true
+  field_link_text: true
   name: true
   thumbnail: true
   uid: true

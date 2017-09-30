@@ -1,0 +1,22 @@
+uuid: e4a1dd91-981f-4457-a2f4-d2331ab361ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_color
+    - media_entity.bundle.link
+  module:
+    - color_field
+id: media.link.field_color
+field_name: field_color
+entity_type: media
+bundle: link
+label: Color
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

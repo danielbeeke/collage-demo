@@ -1,0 +1,17 @@
+uuid: e8a9327d-52ba-4011-b926-352fb9631354
+langcode: en
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.carousel
+id: media.carousel.default
+targetEntityType: media
+bundle: carousel
+mode: default
+content: {  }
+hidden:
+  childs: true
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

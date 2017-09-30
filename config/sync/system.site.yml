@@ -1,11 +1,11 @@
 uuid: 6c0dc3c4-8793-4bf3-8c9a-30df045fadc1
-name: Collage
+name: 'Collage demo'
 mail: daniel@studiofonkel.nl
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /user/login
+  front: /node/2
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en

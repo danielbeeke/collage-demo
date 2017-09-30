@@ -13,7 +13,7 @@ third_party_settings:
       id: ds_1col
       library: null
       disable_css: false
-      entity_classes: all_classes
+      entity_classes: no_classes
       settings:
         wrappers:
           ds_content: div
@@ -23,7 +23,42 @@ third_party_settings:
         link_custom: ''
         classes:
           layout_class: {  }
-    regions: {  }
+    regions:
+      ds_content:
+        - collage
+    fields:
+      collage:
+        plugin_id: collage
+        weight: 0
+        label: hidden
+        formatter: default
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow-el: ''
+            ow-cl: ''
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
 id: media.collage.full
 targetEntityType: media
 bundle: collage

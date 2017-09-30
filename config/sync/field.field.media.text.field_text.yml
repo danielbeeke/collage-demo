@@ -1,0 +1,21 @@
+uuid: 09cce100-5602-4c91-a485-f710ec9c6874
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_text
+    - media_entity.bundle.text
+  module:
+    - text
+id: media.text.field_text
+field_name: field_text
+entity_type: media
+bundle: text
+label: Text
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

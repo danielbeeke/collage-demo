@@ -1,0 +1,22 @@
+uuid: 142bf94e-b505-43e4-b9e6-bfab8d6bee51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_color
+    - media_entity.bundle.background_color
+  module:
+    - color_field
+id: media.background_color.field_color
+field_name: field_color
+entity_type: media
+bundle: background_color
+label: Color
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 0
+field_type: color_field_type

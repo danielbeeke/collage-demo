@@ -1,0 +1,18 @@
+uuid: 17981674-64a9-4781-99d8-76eb41b429bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.text.field_text
+    - media_entity.bundle.text
+id: media.text.default
+targetEntityType: media
+bundle: text
+mode: default
+content: {  }
+hidden:
+  created: true
+  field_text: true
+  name: true
+  thumbnail: true
+  uid: true

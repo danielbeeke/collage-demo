@@ -4,8 +4,12 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_bricks
+    - media_entity.bundle.background_color
+    - media_entity.bundle.carousel
     - media_entity.bundle.collage
     - media_entity.bundle.link
+    - media_entity.bundle.reference
+    - media_entity.bundle.text
     - node.type.page
   module:
     - bricks
@@ -23,8 +27,12 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
+      background_color: background_color
+      carousel: carousel
       collage: collage
       link: link
+      reference: reference
+      text: text
     sort:
       field: name
       direction: ASC

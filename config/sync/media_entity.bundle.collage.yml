@@ -11,5 +11,5 @@ type: collage
 queue_thumbnail_downloads: false
 new_revision: false
 type_configuration:
-  collage_breakpoints: "Mobile|320|6\r\nTablet|720|12\r\nDesktop|1280|24"
+  collage_breakpoints: "Mobile|320|12\r\nTablet|768|24\r\nDesktop|1100|32"
 field_map: {  }

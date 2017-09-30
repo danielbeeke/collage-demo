@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.page.field_bricks
+    - field.field.node.page.field_image
+    - field.field.node.page.field_summary
     - node.type.page
   module:
     - user
@@ -14,4 +16,6 @@ mode: default
 content: {  }
 hidden:
   field_bricks: true
+  field_image: true
+  field_summary: true
   links: true

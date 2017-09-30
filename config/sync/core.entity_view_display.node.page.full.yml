@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.page.field_bricks
+    - field.field.node.page.field_image
+    - field.field.node.page.field_summary
     - node.type.page
   module:
     - bricks
@@ -16,7 +18,7 @@ third_party_settings:
       id: ds_1col
       library: null
       disable_css: false
-      entity_classes: all_classes
+      entity_classes: no_classes
       settings:
         wrappers:
           ds_content: div
@@ -28,21 +30,14 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - node_title
         - field_bricks
-    fields:
-      node_title:
-        plugin_id: node_title
-        weight: 0
-        label: hidden
-        formatter: default
 id: node.page.full
 targetEntityType: node
 bundle: page
 mode: full
 content:
   field_bricks:
-    weight: 1
+    weight: 0
     label: hidden
     settings:
       view_mode: full
@@ -58,7 +53,6 @@ content:
             lbw-el: ''
             lbw-cl: ''
             lbw-at: ''
-            ow: true
             ow-el: div
             ow-cl: bricks
             ow-at: ''
@@ -71,6 +65,7 @@ content:
             suffix: ''
             lbw: false
             lb-col: false
+            ow: false
             ow-def-at: false
             ow-def-cl: false
             fis: false
@@ -80,4 +75,6 @@ content:
     type: bricks_nested
     region: ds_content
 hidden:
+  field_image: true
+  field_summary: true
   links: true

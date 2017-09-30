@@ -1,0 +1,12 @@
+uuid: 7c73e1df-d299-4a4a-a71d-940f30446cc6
+langcode: en
+status: true
+dependencies: {  }
+id: background_color
+label: 'Background color'
+description: ''
+type: generic
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration: {  }
+field_map: {  }

@@ -1,0 +1,12 @@
+uuid: aa4ef880-97fc-48bc-b64c-a2aabd25d57c
+langcode: en
+status: true
+dependencies: {  }
+id: carousel
+label: Carousel
+description: ''
+type: generic
+queue_thumbnail_downloads: false
+new_revision: false
+type_configuration: {  }
+field_map: {  }

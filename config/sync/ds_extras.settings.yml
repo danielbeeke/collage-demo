@@ -1,5 +1,6 @@
-fields_extra: false
-fields_extra_list: {  }
+fields_extra: true
+fields_extra_list:
+  - media|carousel|childs
 field_permissions: false
 hidden_region: false
 override_node_revision: false
