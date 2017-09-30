@@ -1,0 +1,21 @@
+@include responsive-vw-col {
+  $vw-col: 100vw / ($columns / 2);
+
+  body:before {
+    background: repeating-linear-gradient(
+        90deg,
+        rgba(white, 0),
+        rgba(white, 0) #{strip-unit($vw-col) - .15 + 0%},
+        rgba(gray, .1) #{strip-unit($vw-col) + 0%},
+        rgba(white, 0) #{strip-unit($vw-col) + 0%});
+    position: fixed;
+    display: block;
+    content: '';
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 100vw;
+    max-width: $max-width;
+    transform: translateX(-50%);
+  }
+}

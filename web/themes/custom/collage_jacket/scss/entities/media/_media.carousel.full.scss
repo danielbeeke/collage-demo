@@ -1,0 +1,116 @@
+.media.carousel.full {
+  .owl-carousel:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background: repeating-linear-gradient(
+        -45deg,
+        rgba(gray, 0),
+        rgba(gray, 0) 2px,
+        rgba(gray, .1) 2px,
+        rgba(gray, .1) 4px);
+    z-index: -1;
+    transform: translateY(0);
+    pointer-events: none;
+    transition: transform $speed $easing;
+  }
+
+  .owl-nav {
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    z-index: -1;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      bottom: 0;
+      left: 0;
+      background: repeating-linear-gradient(
+          -45deg,
+          rgba(gray, 0),
+          rgba(gray, 0) 2px,
+          rgba(gray, .1) 2px,
+          rgba(gray, .1) 4px);
+      z-index: -1;
+      transform: translateY(0);
+      pointer-events: none;
+      transition: transform $speed $easing;
+    }
+  }
+
+  .owl-prev, .owl-next {
+    float: left;
+    background-color: $yellow;
+    text-indent: -100vw;
+    position: relative;
+    transition: color $speed $easing, background-color $speed $easing;
+
+    &:before {
+      transform-origin: center center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      content: '▶';
+      text-indent: 0;
+    }
+
+    &:not(.disabled):hover {
+      background-color: $black;
+      color: $yellow;
+    }
+
+    &.disabled {
+      background-color: $gray-light;
+      color: $gray;
+      cursor: not-allowed;
+    }
+  }
+
+  .owl-prev {
+    &:before {
+      content: '◀';
+    }
+  }
+
+  .media.link.full {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+}
+
+@include responsive-vw-col {
+  .media.carousel.full {
+    .owl-carousel {
+      width: calc(100% - #{$vw-col});
+    }
+
+    .owl-carousel:before {
+      transform: translate(#{$vw-col * .5}, #{$vw-col * .5});
+    }
+
+    .owl-nav {
+      width: $vw-col;
+
+      &:after {
+        transform: translate(#{$vw-col * .5}, #{$vw-col * .5});
+      }
+    }
+
+    .owl-prev, .owl-next {
+      width: $vw-col;
+      height: $vw-col;
+      font-size: $vw-col * .18;
+    }
+  }
+}

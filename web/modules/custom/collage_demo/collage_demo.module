@@ -1,0 +1,24 @@
+<?php
+
+use Drupal\Core\Render\Element;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ */
+function collage_demo_field_widget_bricks_tree_inline_form_alter(&$element, FormStateInterface $form_state, $context) {
+  foreach (Element::children($element['entities']) as $delta) {
+    $widget_row = &$element['entities'][$delta];
+      hide($widget_row['options']['view_mode']);
+      hide($widget_row['options']['css_class']);
+  }
+}
+
+/**
+ * Implements hook_entity_display_build_alter().
+ */
+function collage_demo_entity_display_build_alter(&$build, $context) {
+  if ($context['entity']->bundle() == 'carousel') {
+    $build['#attached']['library'][] = 'collage_demo/carousel';
+  }
+}

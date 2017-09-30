@@ -1,0 +1,53 @@
+.block.logo {
+  @include grid-span(10, 2);
+  margin-top: $padding;
+  display: flex;
+  position: relative;
+  align-items: center;
+
+  .site-logo {
+    flex: 0 0 grid-span(3, 1, 10);
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .site-name {
+    margin: 0;
+    flex: 1 1 auto;
+    text-align: right;
+  }
+
+  .site-name a {
+    font-family: 'Marcellus', serif;
+    font-weight: 300;
+    text-decoration: none;
+    color: $black;
+  }
+}
+
+@include breakpoint ($tablet) {
+  .block.logo {
+    @include grid-span(22, 2);
+
+    .site-logo {
+      flex: 0 0 grid-span(5, 1, 22);
+    }
+  }
+}
+
+@include breakpoint ($desktop) {
+  .block.logo {
+    @include grid-span(30, 2);
+
+    .site-logo {
+      flex: 0 0 grid-span(3, 1, 30);
+      margin-right: $padding;
+    }
+
+    .site-name {
+      text-align: left;
+    }
+  }
+}

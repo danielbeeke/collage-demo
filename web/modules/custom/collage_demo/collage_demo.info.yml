@@ -1,0 +1,6 @@
+name: Collage Demo
+description: Collage demo
+package: Bricks
+
+type: module
+core: 8.x

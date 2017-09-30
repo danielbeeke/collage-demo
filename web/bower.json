@@ -1,6 +1,7 @@
 {
-  "name": "collage",
+  "name": "vvn-info-site",
   "authors": [
+    "Ewout Goosmann <ewout@studiofonkel.nl>",
     "Daniel Beeke <daniel@studiofonkel.nl>"
   ],
   "description": "",
@@ -11,10 +12,23 @@
     "**/.*",
     "node_modules",
     "bower_components",
+    "libraries",
     "test",
     "tests"
   ],
   "dependencies": {
-    "turbolinks": "turbolinks/turbolinks#^5.0.3"
+    "isotope": "metafizzy/isotope#^3.0.4",
+    "owl.carousel": "OwlCarousel2/OwlCarousel2#^2.2.1",
+    "jquery.one-transition-end": "studio-fonkel/jquery.one-transition-end",
+    "jquery.scrollTo": "^2.1.2",
+    "fontawesome-iconpicker": "^1.3.0",
+    "fontawesome": "fontawesome#^4.7.0",
+    "jquery-focuspoint": "^1.1.3",
+    "sticky-kit": "^1.1.2",
+    "autogrow": "^1.0.3",
+    "jquery-mousewheel": "jquery/jquery-mousewheel#^3.1.13"
+  },
+  "devDependencies": {
+    "jquery-simple-color": "^1.2.2"
   }
 }

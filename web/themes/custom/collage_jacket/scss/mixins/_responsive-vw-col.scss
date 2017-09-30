@@ -10,7 +10,7 @@
     $min-width: nth($grid, 1) !global;
     $columns: nth(nth($grid, 2), 1) !global;
     $max: if(length($grids) == $i, $max-width, 100vw) !global;
-    $vw-col: $max/ $columns !global;
+    $vw-col: $max / $columns !global;
     $grid-index: $i !global;
 
     @if $min-width < 0 {
