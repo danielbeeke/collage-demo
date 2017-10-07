@@ -1,15 +1,9 @@
 @mixin responsive-vw-col () {
-  $grids: sgs-get('grids');
-
-  $last-grid: nth($grids, length($grids));
-  $last-columns: nth(nth($last-grid, 2), 1);
-  $grids: map-merge($grids, ($max-width: ($last-columns)));
-
-  @for $i from 1 through length($grids) {
-    $grid: nth($grids, $i);
-    $min-width: nth($grid, 1) !global;
-    $columns: nth(nth($grid, 2), 1) !global;
-    $max: if(length($grids) == $i, $max-width, 100vw) !global;
+  $i: 1;
+  @each $grid-name, $grid in $grids {
+    $min-width: map-get($grid, 'start-width') !global;
+    $columns: map-get($grid, 'columns') !global;
+    $max: map-get($grid, 'max-width') !global;
     $vw-col: $max / $columns !global;
     $grid-index: $i !global;
 
@@ -21,5 +15,7 @@
         @content;
       }
     }
+
+    $i: $i + 1;
   }
 }

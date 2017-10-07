@@ -1,6 +1,9 @@
 carousel:
   js:
     /libraries/owl.carousel/dist/owl.carousel.js: {}
+    /libraries/Background-Check/background-check.js: {}
     js/carousel.js: {}
+    js/backgroundCheck.js: {}
+    js/backgroundColorScroll.js: {}
   dependencies:
     - core/jquery

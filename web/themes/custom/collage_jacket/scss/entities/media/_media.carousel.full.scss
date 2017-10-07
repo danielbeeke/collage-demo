@@ -1,4 +1,10 @@
 .media.carousel.full {
+
+  // Temporary used because of DS bug that let a render crash when not containing fields.
+  .title {
+    display: none;
+  }
+
   .owl-carousel:before {
     content: '';
     display: block;
@@ -59,7 +65,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      content: '▶';
+      content: '⭢'; // Not visible, but this holds an arrow right.
       text-indent: 0;
     }
 
@@ -77,7 +83,7 @@
 
   .owl-prev {
     &:before {
-      content: '◀';
+      content: '⭠'; // Not visible, but this holds an arrow left.
     }
   }
 
@@ -110,7 +116,7 @@
     .owl-prev, .owl-next {
       width: $vw-col;
       height: $vw-col;
-      font-size: $vw-col * .18;
+      font-size: $vw-col * .3;
     }
   }
 }
