@@ -1,0 +1,18 @@
+uuid: ad90369e-0778-4724-9393-c10264c89354
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_image
+    - media_entity.bundle.image
+id: media.image.default
+targetEntityType: media
+bundle: image
+mode: default
+content: {  }
+hidden:
+  created: true
+  field_image: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -1,24 +1,25 @@
-uuid: d63acb6a-4ecb-4155-99c8-f0922b4b1c36
+uuid: 4ac5fea4-b80d-4852-8488-50e3bb01bd8e
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.background_color.field_color
-    - media_entity.bundle.background_color
+    - field.field.media.image.field_image
+    - image.style.thumbnail
+    - media_entity.bundle.image
   module:
-    - color_field
-id: media.background_color.default
+    - image
+id: media.image.default
 targetEntityType: media
-bundle: background_color
+bundle: image
 mode: default
 content:
-  field_color:
+  field_image:
     weight: 1
     settings:
-      placeholder_color: ''
-      placeholder_opacity: ''
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
-    type: color_field_widget_default
+    type: image_image
     region: content
   name:
     type: string_textfield

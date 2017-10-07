@@ -7,6 +7,7 @@ dependencies:
     - media_entity.bundle.background_color
     - media_entity.bundle.carousel
     - media_entity.bundle.collage
+    - media_entity.bundle.image
     - media_entity.bundle.link
     - media_entity.bundle.reference
     - media_entity.bundle.text
@@ -30,6 +31,7 @@ settings:
       background_color: background_color
       carousel: carousel
       collage: collage
+      image: image
       link: link
       reference: reference
       text: text

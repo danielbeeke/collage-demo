@@ -1,13 +1,15 @@
-uuid: 43dfec22-3171-40b6-91ad-467f75bee758
+uuid: a8ad6d09-aadc-4e00-873f-f7e4f6541626
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.media.full
-    - media_entity.bundle.carousel
+    - field.field.media.image.field_image
+    - image.style.large
+    - media_entity.bundle.image
   module:
     - ds
-    - field_group
+    - image
 third_party_settings:
   ds:
     layout:
@@ -26,44 +28,20 @@ third_party_settings:
           layout_class: {  }
     regions:
       ds_content:
-        - name
-        - childs
-        - group_wrapper
-  field_group:
-    group_wrapper:
-      children:
-        - childs
-      parent_name: ''
-      weight: 1
-      format_type: html_element
-      format_settings:
-        label: Wrapper
-        element: div
-        show_label: false
-        label_element: h3
-        attributes: ''
-        effect: none
-        speed: fast
-        id: ''
-        classes: owl-carousel
-      label: Wrapper
-id: media.carousel.full
+        - field_image
+id: media.image.full
 targetEntityType: media
-bundle: carousel
+bundle: image
 mode: full
 content:
-  childs:
-    weight: 0
-    region: ds_content
-    settings: {  }
-    third_party_settings: {  }
-  name:
-    type: string
+  field_image:
+    type: image
     weight: 0
     region: ds_content
     label: hidden
     settings:
-      link_to_entity: false
+      image_style: large
+      image_link: ''
     third_party_settings:
       ds:
         ft:
@@ -74,9 +52,8 @@ content:
             lbw-el: ''
             lbw-cl: ''
             lbw-at: ''
-            ow: true
-            ow-el: div
-            ow-cl: title
+            ow-el: ''
+            ow-cl: ''
             ow-at: ''
             fis-el: ''
             fis-cl: ''
@@ -87,6 +64,7 @@ content:
             suffix: ''
             lbw: false
             lb-col: false
+            ow: false
             ow-def-at: false
             ow-def-cl: false
             fis: false
@@ -95,5 +73,6 @@ content:
             fi-def-at: false
 hidden:
   created: true
+  name: true
   thumbnail: true
   uid: true
