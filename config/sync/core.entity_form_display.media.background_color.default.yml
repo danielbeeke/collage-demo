@@ -14,11 +14,9 @@ mode: default
 content:
   field_color:
     weight: 1
-    settings:
-      placeholder_color: ''
-      placeholder_opacity: ''
+    settings: {  }
     third_party_settings: {  }
-    type: color_field_widget_default
+    type: color_field_widget_html5
     region: content
   name:
     type: string_textfield

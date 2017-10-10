@@ -19,7 +19,10 @@
       var pixelsVisibleFromBottom = Math.max(0, scrollTop - backgroundStartsOn);
       var pixelsVisible = Math.max(0, pixelsVisibleFromTop - pixelsVisibleFromBottom);
       var percentageVisible = Math.round(100 / itemHeight * pixelsVisible);
-      backgroundItem.backgroundElement.css('opacity', percentageVisible / 100);
+
+      window.requestAnimationFrame(function () {
+        backgroundItem.backgroundElement.css('opacity', percentageVisible / 100);
+      });
     });
   });
 

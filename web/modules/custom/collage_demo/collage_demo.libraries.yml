@@ -1,7 +1,7 @@
 carousel:
   js:
     /libraries/owl.carousel/dist/owl.carousel.js: {}
-    /libraries/Background-Check/background-check.js: {}
+    /libraries/background-check/background-check.js: {}
     js/carousel.js: {}
     js/backgroundCheck.js: {}
     js/backgroundColorScroll.js: {}
