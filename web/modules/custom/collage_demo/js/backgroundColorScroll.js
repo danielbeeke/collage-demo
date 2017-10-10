@@ -2,6 +2,8 @@
 
   var $backgroundItems = $('.media.background_color.full');
 
+  console.log($backgroundItems)
+
   $backgroundItems.each(function (delta, backgroundItem) {
     backgroundItem.backgroundElement = $('<div class="fixed-background-color"></div>');
     backgroundItem.backgroundElement.css('background-color', $(backgroundItem).attr('data-color'));

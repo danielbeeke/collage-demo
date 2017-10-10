@@ -1,4 +1,4 @@
-carousel:
+collage_demo:
   js:
     /libraries/owl.carousel/dist/owl.carousel.js: {}
     /libraries/background-check/background-check.js: {}

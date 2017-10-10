@@ -21,7 +21,6 @@ function collage_demo_field_widget_bricks_tree_inline_form_alter(&$element, Form
  * Implements hook_entity_display_build_alter().
  */
 function collage_demo_entity_display_build_alter(&$build, $context) {
-  if ($context['entity']->bundle() == 'carousel') {
-    $build['#attached']['library'][] = 'collage_demo/carousel';
-  }
+  $build['#attached']['library'][] = 'collage_demo/collage_demo';
 }
+
